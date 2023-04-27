@@ -31,16 +31,3 @@ Então('a API irá retornar respodendo o código {int}') do |int|
   puts "response code #{@response.code}"
   puts "response body #{@response.body}"
   end
-  
-Quando('realizar uma requisição para alterar uma instituição sem passar  body') do
-  @response = HTTParty.put($uri_base, 
-        :header => {'content-type': 'application/json', 
-        'Authorization': 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJkZXNhZmlvIjoic2VyYXNhIn0.oOMv4kf9hKMtuatZEZJyESVu9Z7h6hGBwrZRJ-9HkCU'})
-    end
-
-Então('a API irá retornar respodendo o código {int}') do |int|
-    # Então('a API irá retornar respodendo o código {float}') do |float|
-    expect(@response.code).to eq(400)
-    puts "response code #{@response.code}"
-    puts "response body #{@response.body}"
-    end

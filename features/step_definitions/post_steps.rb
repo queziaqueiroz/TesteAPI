@@ -15,11 +15,11 @@ Quando('realizar uma requisição para cadastrar uma instituição') do
   
 Então('a API irá retornar os dados do cadastro da instituição respondendo o código {int}') do |int|
   # Então('a API irá retornar os dados do cadastro da instituição respondendo o código {float}') do |float|
-    expect(@request.code).to eq(201)
+    expect(@request.code).to eq 201
     puts "request code #{@request.code}"
-    expect(@request["banco"]).to eq(@new_bank[:banco])
-    expect(@request["estadoAtuacao"]).to eq(@new_bank[:estadoAtuacao])
-    expect(@request["juros"]).to eq(@new_bank[:juros])
+    expect(@request['banco']).to eq(@new_bank[:banco])
+    expect(@request['estadoAtuacao']).to eq(@new_bank[:estadoAtuacao])
+    expect(@request['juros']).to eq(@new_bank[:juros])
     puts "request body #{@request.body}"
   end
   

@@ -45,7 +45,7 @@ Então('a API irá retornar o banco cadastrado com o id informado.') do
       end
       
 Quando('realizar uma requsição para consultar as instituições utilizando os parameters\(juros={float}%)') do |float|
-    @response = HTTParty.get($uri_base, :header => {'content-type': 'application/json', 'Authorization': 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJkZXNhZmlvIjoic2VyYXNhIn0.oOMv4kf9hKMtuatZEZJyESVu9Z7h6hGBwrZRJ-9HkCU'}, :query => {'juros' => "10.75%"})
+    @response = HTTParty.get($uri_base, :header => {'content-type': 'application/json', 'Authorization': 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJkZXNhZmlvIjoic2VyYXNhIn0.oOMv4kf9hKMtuatZEZJyESVu9Z7h6hGBwrZRJ-9HkCU'}, :query => {'juros' => "10.75"})
       end
       
 Então('a API irá retornar a lista de todos os bancos cadastrados com o valor do juros informado.') do
